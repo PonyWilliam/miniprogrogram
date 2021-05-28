@@ -1,0 +1,159 @@
+page{
+    min-height:100%;
+    background:#f2f2f2;
+}
+.content{
+    margin-top:52rpx;
+}
+.content .time{
+  height: 44rpx;
+  font-size: 28rpx;
+  line-height: 44rpx;
+  color:rgba(158, 158, 181, 1);
+  text-align: center;
+}
+.content .card{
+    margin-top:26rpx;
+    background-color:#5A5ADD;
+    width: 652rpx;
+    height: 320rpx;
+    border-radius: 30rpx;
+    padding:40rpx;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 3px rgba(0, 0, 0,.15);
+}
+.content .card .header{
+    width:100%;
+    display: flex;
+}
+.content .card .header .ava{
+    width:60rpx;
+    height:60rpx;
+    overflow: hidden;
+    display: inline-block;
+    border-radius: 20rpx;
+}
+.content .card .header .name{
+    display: inline-block;
+    line-height:60rpx;
+    height:60rpx;
+    margin-left:26rpx;
+    font-size:28rpx;
+    color:rgba(188, 188, 224, 1);
+}
+.content .card .title{
+    margin-top:30rpx;
+    height:60rpx;
+    line-height:60rpx;
+    color:white;
+    font-size:36rpx;
+}
+.content .card .content{
+    overflow: hidden;
+    height:88rpx;
+    line-height:44rpx;
+    font-size:28rpx;
+    margin-top:16rpx;
+    color:rgba(255, 255, 255, .8);
+    margin-bottom: calc(30rpx + 150rpx + 15rpx);
+}
+/*做差异化*/
+/*第二个*/
+.content:nth-child(3n + 2) .card{
+    background-color:#fff;
+}
+.content:nth-child(3n + 2) .name{
+  color:#737382;
+}
+.content:nth-child(3n + 2) .title{
+  color:#000;
+}
+.content:nth-child(3n + 2) .content{
+  color:rgba(11, 11, 18, .65);
+}
+/*第三个*/
+.content:nth-child(3n) .card{
+  background-color:#fff;
+  border: 2px solid rgb(63, 191, 61);
+}
+.content:nth-child(3n) .name{
+color:#737382;
+}
+.content:nth-child(3n) .title{
+color:#000;
+}
+.content:nth-child(3n) .content{
+color:rgba(11, 11, 18, .65);
+}
+
+
+
+.full{
+  transition:all .7s;
+  position: fixed;
+  display: flex;
+  z-index:5;
+  overflow:hidden;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  top:0;
+  left:0%;/*去掉container 的 padding*/
+}
+.full .fullcontainer{
+  transition:all 1s;
+  box-sizing: border-box;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+}
+.full .title{
+  color:rgb(244, 133, 52);
+  text-align: center;
+  font-size:42rpx;
+  line-height: 66rpx;
+}
+.full .logo{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.full .content{
+  font-size:32rpx;
+  text-indent: 64rpx;
+  text-align: left;
+}
+.full .form{
+    width:100%;
+    box-sizing: border-box;
+    padding:20rpx 60rpx;
+
+}
+.full .form .form_input{
+  text-align: left;
+  color:#555;
+  border-right: #ffffff 0px solid;
+  border-top: #ffffff 0px solid;
+  padding:20rpx 40rpx;
+  border-radius: 15rpx;
+  font-size: 32rpx;
+  border-left: #ffffff 0px solid;
+  border-bottom: #c0c0c0 1px solid;
+  background-color: #cacaca;
+}
+.full .submit{
+  display: flex;
+  margin-top:16rpx;
+  width:100%;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.full .submit .button{
+  width:calc(50% - 30rpx);
+  box-sizing: border-box;
+  display: block;
+  border-radius: 20rpx;
+  letter-spacing: 10rpx;
+}
+@import 'message-wxa-auto-dark.wxss'

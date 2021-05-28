@@ -1,0 +1,30 @@
+/* 
+此文件为开发者工具生成，生成时间: 2021/5/28 下午9:08:16
+使用方法：
+在 index.wxss 文件末尾引入样式
+```
+@import "./index-wxa-auto-dark.wxss";
+```
+ */
+
+@media (prefers-color-scheme: dark) {
+    .header .maintitle {
+        color: rgb(240, 240, 240);
+    }
+
+    .header .subtitle {
+        color: rgb(240, 240, 240);
+    }
+
+    .content .card .title {
+        color: rgb(220, 223, 236);
+    }
+
+    .content .card .text {
+        color: rgb(220, 223, 236);
+    }
+
+    .full .title {
+        color: rgb(153, 56, 0);
+    }
+}

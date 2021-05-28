@@ -1,0 +1,45 @@
+<view class="container">
+    <view class="header">
+        <view class="tips">
+            <view class="title">
+                说明
+            </view>
+            <view class="content">
+                如您有正在租借的产品，下方会显示您正在租借的产品信息
+            </view>
+        </view>
+    </view>
+    <image class="devide" src="cloud://dasai-8gg0xegvdb3b7671.6461-dasai-8gg0xegvdb3b7671-1305930709/images/mine/path.svg" />
+    <view class="result" wx:if="{{show}}">
+        <!--展现result-->
+        <view class="title">
+          我的租借
+        </view>
+        <view class="table">
+          <view class="tr">
+          <view class="th">记录ID</view>
+          <view class="th">产品名</view>
+          <view class="th">租出时间</view>
+          <view class="th ">归还时间</view>
+          </view>
+          <block wx:for="{{result}}" wx:key="index">
+          <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+          <view class="td">{{item.ID}}</view>
+          <view class="td">{{item.Pinfo.product_name}}</view>
+          <view class="td">{{item.StrBorrowTime}}</view>
+          <view class="td">{{item.StrReturnTime}}</view>
+          </view>
+          <view class="tr bg-w" wx:else>
+          <view class="td">{{item.ID}}</view>
+          <view class="td">{{item.Pinfo.product_name}}</view>
+          <view class="td">{{item.StrBorrowTime}}</view>
+          <view class="td">{{item.StrReturnTime}}</view>
+          </view>
+          </block>
+        </view>
+    </view>
+    <mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+    <view class="notfound" wx:if="{{!show}}">
+        <!--没有找到时使用这个界面，这个界面需要做延迟渲染。然后就是慢慢的布局了-->
+    </view>
+</view>

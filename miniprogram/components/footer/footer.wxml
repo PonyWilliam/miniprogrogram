@@ -1,0 +1,12 @@
+<!--components/footer/footer.wxml-->
+<view class="footer">
+    <view class="content" bindtap="{{now == 1 ? 'nothing':'go1'}}">
+        <image class="image {{now == 1 ? 'normal':'opacity'}}" src="cloud://dasai-8gg0xegvdb3b7671.6461-dasai-8gg0xegvdb3b7671-1305930709/images/footericon/footer1.svg"></image>
+    </view>
+    <view class="content" bindtap="{{now == 2 ? 'nothing':'go2'}}">
+        <image class="image {{now == 2 ? 'normal':'opacity'}}" src="cloud://dasai-8gg0xegvdb3b7671.6461-dasai-8gg0xegvdb3b7671-1305930709/images/footericon/footer2.png"></image>
+    </view>
+    <view class="content" bindtap="{{now == 3 ? 'nothing':'go3'}}">
+        <image class="image {{now == 3 ? 'normal':'opacity'}}" src="cloud://dasai-8gg0xegvdb3b7671.6461-dasai-8gg0xegvdb3b7671-1305930709/images/footericon/footer3.png"></image>
+    </view>
+</view>

@@ -1,0 +1,28 @@
+/* 
+此文件为开发者工具生成，生成时间: 2021/5/28 下午9:08:16
+使用方法：
+在 mine.wxss 文件末尾引入样式
+```
+@import "./mine-wxa-auto-dark.wxss";
+```
+ */
+
+@media (prefers-color-scheme: dark) {
+    .header .info .text .buttontips {
+        background-color: rgb(17, 17, 17);
+        color: rgb(90, 143, 218);
+    }
+
+    .content .card {
+        background-color: rgb(17, 17, 17);
+    }
+
+    .full .title {
+        color: rgb(209, 209, 209);
+    }
+
+    .full .qrcode .button {
+        background: rgba(55, 47, 91, 0.85);
+        color: rgb(17, 17, 17);
+    }
+}

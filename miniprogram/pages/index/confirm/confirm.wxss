@@ -1,0 +1,160 @@
+page{
+    background:#fff;
+}
+.container{
+  width:100%;
+  padding:30rpx;
+  box-sizing: border-box;
+}
+.header .tips{
+  width:calc(100% - 40rpx);
+  box-sizing: border-box;
+  border-radius: 32rpx;
+  margin-left:20rpx;
+  background:#efefef;
+  box-shadow:8rpx 6rpx 3rpx #cfcfcf;
+  padding:20rpx 10rpx;
+  margin-top: 20rpx;
+}
+.header .tips .title{
+  text-align: center;
+  color:#000;
+  font-size:44rpx;
+  height:66rpx;
+  line-height:66rpx;
+  letter-spacing: 10rpx;
+  font-weight:600;
+}
+.header .tips .content{
+  color:#222;
+  font-weight:380;
+  margin-top:10rpx;
+  font-size:32rpx;
+  line-height:44rpx;
+  text-indent: 64rpx;
+}
+
+.content{
+  margin-top:52rpx;
+  margin-bottom: calc(30rpx + 150rpx + 15rpx);
+}
+.content .time{
+height: 44rpx;
+font-size: 28rpx;
+line-height: 44rpx;
+color:rgba(158, 158, 181, 1);
+text-align: center;
+}
+.content .card{
+  margin-top:26rpx;
+  background-color:#cde7ff;
+  width: 652rpx;
+  min-height: 320rpx;
+  border-radius: 30rpx;
+  padding:40rpx;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 3px rgba(0, 0, 0,.25);
+}
+.content .card .header{
+  width:100%;
+  display: flex;
+}
+.content .card .header .ava{
+  width:60rpx;
+  height:60rpx;
+  overflow: hidden;
+  display: inline-block;
+  border-radius: 20rpx;
+}
+.content .card .header .name{
+  display: inline-block;
+  line-height:60rpx;
+  height:60rpx;
+  margin-left:26rpx;
+  font-size:28rpx;
+  color:#434343;
+}
+.content .card .header .time{
+    display: inline-block;
+    color:#595959;
+    line-height:60rpx;
+    height:60rpx;
+    margin-left:80rpx;
+}
+.content .card .title{
+  margin-top:30rpx;
+  min-height:60rpx;
+  line-height:60rpx;
+  color:#000;
+  font-size:36rpx;
+}
+.content .card .content{
+  overflow: hidden;
+  min-height:88rpx;
+  line-height:44rpx;
+  font-size:28rpx;
+  margin-top:16rpx;
+  color:rgba(11, 11, 18, .65);
+  margin-bottom: 16rpx;
+  
+}
+.content .card .foot{
+    width:100%;
+}
+.content .card .foot .submit{
+  display: flex;
+  margin-top:16rpx;
+  width:100%;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.content .card .foot .button{
+  width:calc(50% - 30rpx);
+  box-sizing: border-box;
+  display: block;
+  border-radius: 20rpx;
+  letter-spacing: 10rpx;
+
+}
+.content .card .foot .message{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    line-height: 120rpx;
+    height: 120rpx;
+    box-sizing: border-box;
+}
+.content .card .foot .message .success{
+    width: 120rpx;
+    height: 120rpx;
+    transform: rotate(20deg);
+    border: solid 2px green;
+    border-radius: 100%;
+    text-align: center;
+    color: green;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 120rpx;
+    background-color: rgba(255, 255, 255, 0.8)
+}
+.content .card .foot .message .fail{
+  width: 120rpx;
+  height: 120rpx;
+  transform: rotate(20deg);
+  border: solid 2px red;
+  border-radius: 100%;
+  text-align: center;
+  color: red;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 120rpx;
+  background-color: rgba(255, 255, 255, 0.8)
+}
+.content .card .foot .message .confirmTime{
+  line-height:180rpx;
+  color:#888;
+  font-size:24rpx;
+  font-weight: 250;
+}
+@import 'confirm-wxa-auto-dark.wxss'

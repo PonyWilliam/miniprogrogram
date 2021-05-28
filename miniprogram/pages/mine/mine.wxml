@@ -1,0 +1,81 @@
+<view class="container">
+  <view class="top"></view>
+  <view class="header">
+      <view class="info">
+          <!--头像-->
+          <view class="images">
+            <image class="small left" src="cloud://dasai-8gg0xegvdb3b7671.6461-dasai-8gg0xegvdb3b7671-1305930709/images/mine/mine1.svg"></image>
+            <view class="userimage">
+              <image class="ava" src="{{ava}}"></image><!--http://arcsoft.dadiqq.cn/face/{{worker.ID}}.png-->
+            </view>
+            <image class="small right" src="cloud://dasai-8gg0xegvdb3b7671.6461-dasai-8gg0xegvdb3b7671-1305930709/images/mine/mine2.svg"></image>
+          </view>
+          <view class="text">
+              <view class="name">{{worker.Name}}</view>
+              <view class="tips">
+                <view class="texttips">
+                    工号:{{worker.Nums}}
+                </view>
+                <button class="buttontips" bindtap='reflash'>upgrade</button>
+              </view>
+          </view>
+      </view>
+  </view>
+  <image class="devide" src="cloud://dasai-8gg0xegvdb3b7671.6461-dasai-8gg0xegvdb3b7671-1305930709/images/mine/path.svg" />
+  <view class="content">
+    <view class="card" bindtap="showqr">
+            <image class="logo" src="cloud://dasai-8gg0xegvdb3b7671.6461-dasai-8gg0xegvdb3b7671-1305930709/images/indexicon/logo1.svg"></image>
+            <text class="title">出示二维码</text>
+    </view>
+    <view class="card" bindtap="scanqr">
+            <image class="logo" src="cloud://dasai-8gg0xegvdb3b7671.6461-dasai-8gg0xegvdb3b7671-1305930709/images/indexicon/logo2.svg"></image>
+            <text class="title">扫码识人</text>
+    </view>
+    <view class="card" bindtap="score">
+            <image class="logo" src="cloud://dasai-8gg0xegvdb3b7671.6461-dasai-8gg0xegvdb3b7671-1305930709/images/indexicon/logo3.svg"></image>
+            <text class="title">信用分查询</text>
+    </view>
+    <view class="card" bindtap="logout">
+            <image class="logo" src="cloud://dasai-8gg0xegvdb3b7671.6461-dasai-8gg0xegvdb3b7671-1305930709/images/indexicon/logo4.svg"></image>
+            <text class="title">退出登录</text>
+    </view>
+  </view>
+  <view style="width:{{fullscreen.width}};height:{{fullscreen.height}};backdrop-filter: {{fullscreen.blur}};background:{{fullscreen.rgba}};" class="full" bindtap="closeqr">
+    <view class="fullcontainer" style="padding:{{fullscreen.padding}};{{fullscreen.opacity}}" wx:if="{{shows==1}}">
+    <view class="title" style="opacity:{{mineopacity}};transition:all .5s">
+          <!---->
+          距离二维码自动刷新还有{{second}}秒
+      </view>
+      <view class="qrcode">
+        <image class="qrimg" src="{{qrimg}}">
+
+        </image>
+        <button class="button" catchtap="getQrcode" data-id="2">
+            立 即 刷 新
+        </button>
+      </view>
+      </view>
+      <view class="othercontainer" style="padding:{{fullscreen.padding}};{{fullscreen.opacity}}" wx:if="{{shows==2}}">
+        <view class="ava">
+          <!--存放头像-->
+          <image class="ava_info" src="https://arcsoft.dadiqq.cn/face/{{otherinfo.ID}}.png"></image>
+        </view>
+        <view class="info">
+          <!--存放信息-->
+          <text class="info_list">唯一标识：{{otherinfo.ID}}</text>
+          <text class="info_list">姓名：{{otherinfo.Name}}</text>
+          <text class="info_list">工号：{{otherinfo.Nums}}</text>
+          <text class="info_list">性别：{{otherinfo.Sex}}</text>
+          <text class="info_list">级别：{{otherinfo.Level}}</text>
+          <text class="info_list">信誉分：{{otherinfo.Score}}</text>
+          <text class="info_list">所在地：{{otherinfo.Place}}</text>
+          <text class="info_list">电话号码：{{otherinfo.Telephone}}</text>
+          <text class="info_list">电子邮箱：{{otherinfo.Mail}}</text>
+        </view>
+          
+        </view>
+  </view>
+  <mp-toptips msg="{{success}}" type="success" show="{{success}}"></mp-toptips>
+  <mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+  <my-footer now="3"/>
+</view>

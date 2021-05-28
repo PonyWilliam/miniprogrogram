@@ -1,0 +1,4 @@
+{
+  "usingComponents": {"mp-toptips": "weui-miniprogram/toptips/toptips"},
+  "navigationBarTitleText": "设备查询"
+}

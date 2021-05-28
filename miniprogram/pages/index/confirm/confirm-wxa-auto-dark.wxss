@@ -1,0 +1,65 @@
+/* 
+此文件为开发者工具生成，生成时间: 2021/5/28 下午9:08:16
+使用方法：
+在 confirm.wxss 文件末尾引入样式
+```
+@import "./confirm-wxa-auto-dark.wxss";
+```
+ */
+
+@media (prefers-color-scheme: dark) {
+    page {
+        background: rgb(17, 17, 17);
+    }
+
+    .header .tips {
+        background: rgb(29, 29, 29);
+        box-shadow: rgb(0, 0, 0);
+    }
+
+    .header .tips .title {
+        color: rgb(255, 255, 255);
+    }
+
+    .header .tips .content {
+        color: rgb(231, 231, 231);
+    }
+
+    .content .time {
+        color: rgb(91, 91, 112);
+    }
+
+    .content .card {
+        background-color: rgb(13, 40, 58);
+    }
+
+    .content .card .header .name {
+        color: rgb(189, 189, 189);
+    }
+
+    .content .card .header .time {
+        color: rgb(163, 163, 163);
+    }
+
+    .content .card .title {
+        color: rgb(255, 255, 255);
+    }
+
+    .content .card .content {
+        color: rgba(255, 255, 255, 0.65);
+    }
+
+    .content .card .foot .message .success {
+        color: rgb(58, 161, 44);
+        background-color: rgba(17, 17, 17, 0.8);
+    }
+
+    .content .card .foot .message .fail {
+        color: rgb(243, 0, 0);
+        background-color: rgba(17, 17, 17, 0.8);
+    }
+
+    .content .card .foot .message .confirmTime {
+        color: rgb(115, 115, 115);
+    }
+}

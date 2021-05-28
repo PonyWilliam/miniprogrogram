@@ -1,0 +1,86 @@
+.container{
+    width:100%;
+    box-sizing: border-box;
+    color:#000;
+    margin-bottom:60rpx;
+}
+.logo{
+    height:120rpx;
+    width:120rpx;
+    left:80rpx;
+    top:calc(300rpx - 120rpx);
+    position: absolute;
+}
+.mask{
+    position: absolute;
+    border-radius: 126rpx;
+    width:660rpx;
+    height:660rpx;
+    left:480rpx;
+    top:-350rpx;
+    background: linear-gradient(to left,rgba(0, 93, 255, 0.6) 0%, rgba(28, 106, 237, 0.36) 100%);
+    transform: rotate(230deg);
+}
+/*
+    大约500rpx，其实可以用三角函数算一下。。。
+*/
+.container .content{
+    width:100%;
+    box-sizing: border-box;
+    margin-top:500rpx;
+    padding:10rpx 40rpx;
+}
+.container .content .header{
+    width:630rpx;
+    height:170rpx;
+    text-align: left;
+    font-size:64rpx;
+    line-height:80rpx;
+}
+.container .content .header .title{
+    font-weight: 600;
+}
+.container .content .header .subtitle{
+    font-weight: 200;
+    color:rgb(136, 136, 136);
+}
+.container .content .login{
+    margin-top:60rpx;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.container .content .login .user{
+    box-sizing: border-box;
+    padding:40rpx;
+    width:630rpx;
+    height:120rpx;
+    font-size:32rpx;
+    line-height:48rpx;
+    border: 2rpx solid rgba(119, 119, 119, .36);
+    border-radius: 16rpx;
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(136, 136, 136, 1);
+    letter-spacing: 1rpx;
+}
+.container .content .login .pwd{
+    margin-top:32rpx;
+}
+.container .content .login .submit{
+    width: 630rpx;
+    height: 120rpx;
+    background: linear-gradient(90deg, rgba(60, 128, 247, 1) 0%, rgba(16, 88, 209, 1) 100%);
+    border-radius: 16rpx;
+    letter-spacing: 2rpx;
+    font-size:28rpx;
+    line-height:120rpx;
+    margin-top:60rpx;
+    box-sizing: border-box;
+    color:white;
+    padding:0;
+}
+.container .content .login .tips{
+    color:rgba(136, 136, 136, 1);
+    margin-top:60rpx;
+}
+@import 'login-wxa-auto-dark.wxss'

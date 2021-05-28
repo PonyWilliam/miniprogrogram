@@ -1,0 +1,79 @@
+/* 
+此文件为开发者工具生成，生成时间: 2021/5/28 下午9:08:16
+使用方法：
+在 message.wxss 文件末尾引入样式
+```
+@import "./message-wxa-auto-dark.wxss";
+```
+ */
+
+@media (prefers-color-scheme: dark) {
+    page {
+        background: rgb(26, 26, 26);
+    }
+
+    .content .time {
+        color: rgb(91, 91, 112);
+    }
+
+    .content .card {
+        background-color: rgb(139, 131, 255);
+    }
+
+    .content .card .header .name {
+        color: rgb(62, 64, 94);
+    }
+
+    .content .card .title {
+        color: rgb(17, 17, 17);
+    }
+
+    .content .card .content {
+        color: rgba(17, 17, 17, 0.8);
+    }
+
+    .content:nth-child(3n + 2) .card {
+        background-color: rgb(17, 17, 17);
+    }
+
+    .content:nth-child(3n + 2) .name {
+        color: rgb(134, 134, 149);
+    }
+
+    .content:nth-child(3n + 2) .title {
+        color: rgb(255, 255, 255);
+    }
+
+    .content:nth-child(3n + 2) .content {
+        color: rgba(255, 255, 255, 0.65);
+    }
+
+    .content:nth-child(3n) .card {
+        background-color: rgb(17, 17, 17);
+    }
+
+    .content:nth-child(3n) .name {
+        color: rgb(134, 134, 149);
+    }
+
+    .content:nth-child(3n) .title {
+        color: rgb(255, 255, 255);
+    }
+
+    .content:nth-child(3n) .content {
+        color: rgba(255, 255, 255, 0.65);
+    }
+
+    .full .title {
+        color: rgb(153, 56, 0);
+    }
+
+    .full .form .form_input {
+        color: rgb(168, 168, 168);
+        border-right: rgb(0, 0, 0);
+        border-top: rgb(0, 0, 0);
+        border-left: rgb(0, 0, 0);
+        border-bottom: rgb(0, 0, 0);
+        background-color: rgb(56, 56, 56);
+    }
+}

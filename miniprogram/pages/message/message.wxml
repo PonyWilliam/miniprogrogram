@@ -1,0 +1,48 @@
+<view class="container">
+    <view class="add" bindtap="openfull" wx:if="{{worker.ID == 1}}">
+        <image style="width:60rpx;height:60rpx;" src="cloud://dasai-8gg0xegvdb3b7671.6461-dasai-8gg0xegvdb3b7671-1305930709/images/all/Add.svg"></image>
+    </view>
+    <view class="content" wx:for="{{messages}}" wx:key="index">
+        <view class="time">
+            {{item.time}}
+        </view>
+        <view class="card">
+            <view class="header">
+                <image class="ava" src="https://arcsoft.dadiqq.cn/face/1.png">
+
+                </image>
+                <view class="name">
+                    {{item.name}}
+                </view>
+            </view>
+            <view class="title">
+                {{item.title}}
+            </view>
+            <view class="content">
+                {{item.content}}
+            </view>
+        </view>
+    </view>
+    <view style="width:{{fullscreen.width}};height:{{fullscreen.height}};backdrop-filter: {{fullscreen.blur}};background:{{fullscreen.rgba}};" class="full">
+        <view class="fullcontainer" style="padding:{{fullscreen.padding}};{{fullscreen.opacity}}">
+            <view class="title">
+                通知发布
+            </view>
+            <view class="content">
+                尊敬的管理{{worker.Name}}，您好。您可以在下方输入标题、内容、来发表新的通知推送给用户
+            </view>
+            <view class="form">
+                标题:<input model:value="{{title}}" class="form_input form_title" type="text" />
+                内容:<textarea model:value="{{content}}" class="form_input form_content" type="text"></textarea>
+                署名:<input model:value="{{name}}" class="form_input form_name" type="text" />
+            </view>
+            <view class="submit">
+                <button class="success button" bindtap="submit">提 交</button>
+                <button class="warning button" bindtap="cancel">取 消</button>
+            </view>
+        </view>
+    </view>
+    <mp-toptips msg="{{success}}" type="success" show="{{success}}"></mp-toptips>
+    <mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+    <my-footer now="2"></my-footer>
+</view>

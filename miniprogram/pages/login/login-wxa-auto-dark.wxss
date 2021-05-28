@@ -1,0 +1,31 @@
+/* 
+此文件为开发者工具生成，生成时间: 2021/5/28 下午9:08:16
+使用方法：
+在 login.wxss 文件末尾引入样式
+```
+@import "./login-wxa-auto-dark.wxss";
+```
+ */
+
+@media (prefers-color-scheme: dark) {
+    .container {
+        color: rgb(255, 255, 255);
+    }
+
+    .container .content .header .subtitle {
+        color: rgb(115, 115, 115);
+    }
+
+    .container .content .login .user {
+        background-color: rgb(17, 17, 17);
+        color: rgb(115, 115, 115);
+    }
+
+    .container .content .login .submit {
+        color: rgb(17, 17, 17);
+    }
+
+    .container .content .login .tips {
+        color: rgb(115, 115, 115);
+    }
+}

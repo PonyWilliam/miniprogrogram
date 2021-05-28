@@ -1,0 +1,55 @@
+<view class="container">
+    <view class="header">
+        <view class="tips">
+            <view class="title">
+                说明
+            </view>
+            <view class="content">
+                他人申请转借于你的东西会在该界面上显示,您可以选择同意或拒绝
+            </view>
+        </view>
+    </view>
+    <view class="content">
+        <view class="show" wx:if="{{has}}">
+            <view class="card" wx:for="{{info}}" wx:key="index">
+                <view class="header">
+                    <image class="ava" src="cloud://dasai-8gg0xegvdb3b7671.6461-dasai-8gg0xegvdb3b7671-1305930709/images/test/1.png">
+
+                    </image>
+                    <view class="name">
+                        {{item.ReqName}}
+                    </view>
+                    <view class="time">
+                        {{item.strTime}}
+                    </view>
+                </view>
+                <view class="title">
+                    转借物品:{{item.Pname}}(ID:{{item.PID}})
+                </view>
+                <view class="content">
+                    转借理由:{{item.Reason}}
+                </view>
+                <view class="foot">
+                    <view class="submit" wx:if="{{item.Confirm==1}}">
+                        <button class="button success" bindtap="accept" data-id="{{item.id}}">同意</button>
+                        <button class="button warning" bindtap="reject" data-id="{{item.id}}">拒绝</button>
+                    </view>
+                    <view class="message" wx:if="{{item.Confirm!=1}}">
+                        <view class="{{item.Confirm==2?\"success\":\"fail\"}} ">
+                            {{item.Confirm == 2?"已确认":"已拒绝"}}
+                        </view>
+                        <view class="confirmTime">
+                            时间:{{item.strRspTime}}
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="notfound" wx:if="{{!has}}">
+            您暂时没有被别人转借物品哦
+        </view>
+    </view>
+    <mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+    <mp-toptips msg="{{success}}" type="success" show="{{error}}"></mp-toptips>
+
+</view>

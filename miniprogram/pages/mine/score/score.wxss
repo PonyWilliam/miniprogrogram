@@ -1,0 +1,16 @@
+.container{
+    box-sizing: border-box;
+}
+.container .title{
+    text-align: left;
+    box-sizing: border-box;
+    margin-top:60rpx;
+    font-size:38rpx;
+    line-height:60rpx;
+    font-weight: 600;
+    width:100%;
+    display: block;
+    padding:0 40rpx;
+    text-align: left;
+}
+@import 'score-wxa-auto-dark.wxss'

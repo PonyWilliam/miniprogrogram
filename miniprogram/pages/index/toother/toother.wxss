@@ -1,0 +1,101 @@
+.container{
+  width:100%;
+  padding:30rpx;
+  box-sizing: border-box;
+}
+.header .tips{
+  width:calc(100% - 40rpx);
+  box-sizing: border-box;
+  border-radius: 32rpx;
+  margin-left:20rpx;
+  background:#efefef;
+  box-shadow:8rpx 6rpx 3rpx #cfcfcf;
+  padding:20rpx 10rpx;
+  margin-top: 20rpx;
+}
+.header .tips .title{
+  text-align: center;
+  color:#000;
+  font-size:44rpx;
+  height:66rpx;
+  line-height:66rpx;
+  letter-spacing: 10rpx;
+  font-weight:600;
+}
+.header .tips .content{
+  color:#222;
+  font-weight:380;
+  margin-top:10rpx;
+  font-size:32rpx;
+  line-height:44rpx;
+  text-indent: 64rpx;
+}
+.header .card{
+    margin-top:40rpx;
+}
+.header .card .select{
+    width:100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 15rpx;
+
+}
+.header .card .select .name{
+    padding:20rpx 50rpx;
+    border-radius: 15rpx;
+    background:#e8e8e8;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.header .card .select .ava{
+    width:120rpx;
+    height:120rpx;
+    border-radius: 20rpx;
+}
+.header .card .select .text{
+    display: block;
+    width:100%;
+    text-align: center;
+    margin-top:30rpx;
+}
+.header .card .select .reason{
+    background:#fcfcfc;
+    color:#333;
+    padding:10rpx 20rpx;
+    border-radius: 15rpx;
+    border:2rpx solid #ccc;
+    box-sizing: border-box;
+}
+.header .card .select .reconfirm{
+    margin-top:25rpx;
+    border-radius: 15rpx;
+    letter-spacing: 4rpx;
+    padding:10rpx 25rpx;
+    background:rgb(188, 188, 188);
+    color:black;
+    border:3rpx solid rgb(39,188,22); 
+    box-shadow: 4rpx 4rpx 3rpx rgba(222, 222, 222, 0.65);
+}
+.header .card .select .submit{
+  margin-top:25rpx;
+  border-radius: 15rpx;
+  letter-spacing: 4rpx;
+  padding:10rpx 25rpx;
+  background:rgb(39,188,22);
+  color:white;
+  border:3rpx solid rgb(188, 188, 188);
+  box-shadow: 4rpx 4rpx 3rpx rgba(39,188,22, 0.65);
+}
+.page__bd{
+    margin-top:50rpx;
+}
+.page__bd .title{
+    font-size:34rpx;
+    line-height:50rpx;
+    display: inline-block;
+}
+@import 'toother-wxa-auto-dark.wxss'

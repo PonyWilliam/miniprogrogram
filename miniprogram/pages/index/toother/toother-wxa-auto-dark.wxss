@@ -1,0 +1,43 @@
+/* 
+此文件为开发者工具生成，生成时间: 2021/5/28 下午9:08:16
+使用方法：
+在 toother.wxss 文件末尾引入样式
+```
+@import "./toother-wxa-auto-dark.wxss";
+```
+ */
+
+@media (prefers-color-scheme: dark) {
+    .header .tips {
+        background: rgb(29, 29, 29);
+        box-shadow: rgb(0, 0, 0);
+    }
+
+    .header .tips .title {
+        color: rgb(255, 255, 255);
+    }
+
+    .header .tips .content {
+        color: rgb(231, 231, 231);
+    }
+
+    .header .card .select .name {
+        background: rgb(34, 34, 34);
+    }
+
+    .header .card .select .reason {
+        background: rgb(19, 19, 19);
+        color: rgb(209, 209, 209);
+        border: rgb(0, 0, 0);
+    }
+
+    .header .card .select .reconfirm {
+        background: rgb(68, 68, 68);
+        color: rgb(255, 255, 255);
+    }
+
+    .header .card .select .submit {
+        background: rgb(0, 110, 0);
+        color: rgb(17, 17, 17);
+    }
+}

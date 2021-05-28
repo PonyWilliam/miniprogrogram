@@ -1,0 +1,56 @@
+<view class="container">
+    <view class="header">
+        <view class="tips">
+            <view class="title">
+                说明
+            </view>
+            <view class="content">
+                该模块用于转借物品给他人，选择要转借的物品后，在下方输入对方工号(学号)即可快速转借
+            </view>
+        </view>
+        <view class="card" wx:if="{{is}}">
+          <view class="product"> 
+            <view class="title">
+              请选择你要转借的物品
+            </view>
+            <radio-group bindchange="radioChange">
+              <label class="weui-cell weui-check__label" wx:for="{{product}}" wx:key="index">
+
+                <view class="weui-cell__hd">
+                  <radio value="{{item.id}}"/>
+                </view>
+                <view class="weui-cell__bd">{{item.product_name}}(ID:{{item.id}})</view>
+              </label>
+            </radio-group>
+          </view>
+          <view class="page__bd" wx:if="{{showsearch}}">
+              <view class="title">
+                  输入对方工号搜索被转借人
+              </view>
+              <mp-searchbar bindclear="clear" throttle="800" bindselectresult="selectResult" search="{{search}}" placeholder="对方工号"></mp-searchbar>
+          </view>
+          <view class="select" wx:if="{{!showsearch}}">
+              
+              <view class="name">
+                <image class="ava" src="https://arcsoft.dadiqq.cn/face/{{worker.value}}.png">
+
+                </image>
+                <view class="text">
+                  已选择:{{worker.text}}
+                </view>
+                <view class="reason">
+                  <textarea bindinput="getreason" class="reason" type="text" placeholder="请输入理由" ></textarea>
+                </view>
+              </view>
+              <button class="reconfirm" bindtap="reconfirm">
+                重 选
+              </button>
+              <button class="submit" bindtap="submit">
+                  确 认
+              </button>
+          </view>
+      </view>
+    </view>
+    <mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+    <mp-toptips msg="{{success}}" type="success" show="{{success}}"></mp-toptips>
+</view>

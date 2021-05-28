@@ -1,0 +1,103 @@
+/**index.wxss**/
+.container{
+    padding:10px 25px;
+    width:100%;
+    box-sizing: border-box;
+}
+.header{
+    box-sizing: border-box;
+    width:100%;
+}
+.header text{
+    display: block;
+}
+.header .maintitle{
+  width: 151px;
+  height: 40px;
+  color: rgba(28, 28, 28, 1);
+    font-size: 22px;
+    line-height: 40px;
+}
+.header .subtitle{
+    height: 38px;
+    color: rgba(28, 28, 28, 1);
+    font-size: 25px;
+    line-height:38px;
+}
+.content{
+    margin-top:12px;
+    box-sizing: border-box;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: calc(30rpx + 106rpx + 15rpx);
+}
+.content .card{
+    margin-top:20px;
+    box-sizing: border-box;
+    padding:24px;
+    border-radius: 12px;
+    width:159px;
+    box-shadow:2px 4px 5px rgba(0, 0, 0, 0.1),
+    -1px -1px 3px rgba(0, 0, 0, 0.1);
+}
+.content .card .logo{
+    width:48px;
+    height:48px;
+    display: block;
+}
+.content .card .title{
+  margin-top:24px;
+  width: 76px;
+  height: 28px;
+  color: rgba(37, 40, 50, 1);
+  font-size: 17px;
+  display: block;
+}
+.content .card .text{
+    margin-top:12px;
+    width: 119px;
+    height: 40px;
+    color: rgba(37, 40, 50, 1);
+    font-size: 12px;
+    opacity: 0.6;
+}
+.full{
+    transition:all .7s;
+    position: fixed;
+    display: flex;
+    z-index:5;
+    overflow:hidden;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    top:0;
+    left:0%;/*去掉container 的 padding*/
+}
+.full .fullcontainer{
+    transition:all 1s;
+    box-sizing: border-box;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+.full .title{
+    color:rgb(244, 133, 52);
+    text-align: center;
+    font-size:42rpx;
+    line-height: 66rpx;
+}
+.full .logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.full .content{
+    font-size:32rpx;
+    text-indent: 64rpx;
+    text-align: left;
+}
+@import 'index-wxa-auto-dark.wxss'

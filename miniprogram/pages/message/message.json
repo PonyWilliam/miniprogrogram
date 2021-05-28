@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "my-footer": "../../components/footer/footer",
+    "mp-toptips": "weui-miniprogram/toptips/toptips"
+  },
+  "navigationBarTitleText": "通知中心"
+}

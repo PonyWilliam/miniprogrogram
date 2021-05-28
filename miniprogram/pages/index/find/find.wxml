@@ -1,0 +1,60 @@
+<view class="container">
+    <view class="header">
+        <view class="tips">
+            <view class="title">
+                说明
+            </view>
+            <view class="content">
+                在下方选择待查询仓库后点击查询即可查询到仓库内的商品信息。
+            </view>
+        </view>
+       <view class="card">
+            <!-- 实际操作功能 -->
+            <view class="content">
+              <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                <view class="picker">
+                  当前选择：{{array[index]}}(点击可选择)
+                </view>
+              </picker>
+            </view>
+            <view class="submit">
+              <button class="button find" bindtap="find">
+                查询
+              </button>
+              <button class="button findall" bindtap="findall">
+                查询全部仓库
+              </button>
+            </view>
+        </view>
+    </view>
+    <image class="devide" src="cloud://dasai-8gg0xegvdb3b7671.6461-dasai-8gg0xegvdb3b7671-1305930709/images/mine/path.svg" />
+    <view class="result">
+        <!--展现result-->
+        <view class="title" wx:if="{{showtable}}">
+          查询结果
+        </view>
+        <view class="table" wx:if="{{showtable}}">
+          <view class="tr">
+          <view class="th">产品ID</view>
+          <view class="th">产品名</view>
+          <view class="th" wx:if="{{showarea}}">所属库房</view>
+          <view class="th ">是否在库</view>
+          </view>
+          <block wx:for="{{result}}" wx:key="index">
+          <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+          <view class="td">{{item.id}}</view>
+          <view class="td">{{item.product_name}}</view>
+          <view class="td" wx:if="{{showarea}}">{{product_area[item.product_belong_area]}}</view>
+          <view class="td">{{item.product_is?'在库':'不在库'}}</view>
+          </view>
+          <view class="tr bg-w" wx:else>
+          <view class="td">{{item.id}}</view>
+          <view class="td">{{item.product_name}}</view>
+          <view class="td" wx:if="{{showarea}}">{{product_area[item.product_belong_area]}}</view>
+          <view class="td">{{item.product_is?'在库':'不在库'}}</view>
+          </view>
+          </block>
+        </view>
+    </view>
+    <mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+</view>

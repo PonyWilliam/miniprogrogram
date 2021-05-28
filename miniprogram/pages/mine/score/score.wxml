@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="title">
+     尊敬的{{worker.Name}}，您的信誉分是:
+  </view>
+  <gauge 
+      height="750" 
+      r="135" 
+      bgWidth="13"
+      gaugeid="g1"
+      animateMsec="700" 
+      min="0"
+      max="100"
+      value="{{worker.Score}}"
+      scaleTextStyle="{{scaleTextStyle}}" 
+      indicatorTextStyle='{{indicatorTextStyle}}'
+      indicatorValueStyle='{{indicatorValueStyle}}'
+      indicatorCircleStyle='{{indicatorCircleStyle}}'
+      scale = "{{[0,10,20,30,40,50,60,70,80,90,100]}}"
+  />
+</view>

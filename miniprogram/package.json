@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "wx-gauge": "^1.2.0"
+  }
+}

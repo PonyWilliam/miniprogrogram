@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "gauge":"wx-gauge"
+  },
+  "navigationBarTitleText": "信誉分查询"
+}
