@@ -41,8 +41,9 @@ Page({
                   "now":"123"//不需要实时数据
               },
               success:res=>{
-                  if(res.data.data == undefined || null){
+                  if(res.data.data == (undefined || null) || res.data.data.logs == (undefined || null)){
                       //不用做了
+                      
                       return
                   }
                   let result = []

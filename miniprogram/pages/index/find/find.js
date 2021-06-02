@@ -12,7 +12,8 @@ Page({
     result:[],
     error:null,
     showtable:false,
-    showarea:false
+    showarea:false,
+    opacity:0
   },
   bindPickerChange: function(e) {
     this.setData({
@@ -72,6 +73,7 @@ Page({
         success:res=>{
             this.setData({
                 showtable:true,
+                opacity:1,
                 showarea:false,
                 result:res.data.data
             })

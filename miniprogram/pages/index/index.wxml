@@ -1,7 +1,8 @@
-<view class="container" data-weui-theme="light">
+<import src="index.skeleton.wxml"/>
+<view style="{{animate}}" class="container" data-weui-theme="light">
     <view class="header">
       <text class="maintitle">HI,{{worker.Name}}</text>
-      <text class="subtitle">欢迎登陆资产管理系统</text>
+      <text class="subtitle">欢迎登陆设备管理系统</text>
     </view>
     <view class="content">
         <view class="card" wx:for="{{cards}}" wx:key="index" bindtap="go{{index + 1}}">
@@ -10,7 +11,7 @@
             <text class="text">{{item.content}}</text>
         </view>
     </view>
-    <view style="width:{{fullscreen.width}};height:{{fullscreen.height}};backdrop-filter: {{fullscreen.blur}};background:{{fullscreen.rgba}};" class="full" bindtap="closefull">
+    <view style="width:{{fullscreen.width}};height:{{fullscreen.height}};backdrop-filter: {{fullscreen.blur}};background:{{fullscreen.rgba}};" class="full" bindtap="closefull" wx:if="{{show1}}">
         <view class="fullcontainer" style="padding:{{fullscreen.padding}};{{fullscreen.opacity}}">
             <view class="logo">
                 <image style="height:520rpx;height:520rpx;" src="cloud://dasai-8gg0xegvdb3b7671.6461-dasai-8gg0xegvdb3b7671-1305930709/images/all/logo.png">
@@ -25,5 +26,15 @@
             </view>
         </view>
     </view>
-    <my-footer now="1"/>
+    <view style="width:{{fullscreen.width}};height:{{fullscreen.height}};backdrop-filter: {{fullscreen.blur}};background:{{fullscreen.rgba}};" class="full" bindtap="closefull" wx:if="{{show2}}">
+        <view class="fullcontainer" style="padding:{{fullscreen.padding}};{{fullscreen.opacity}}">
+            <view class="title">
+            项 目 介 绍
+            </view>
+            <view class="video_content">
+                <video controls="true" catchtap="video" class="myvideo" id="myvideo" src="cloud://dasai-8gg0xegvdb3b7671.6461-dasai-8gg0xegvdb3b7671-1305930709/video/1.mp4"></video>
+            </view>
+        </view>
+    </view>
 </view>
+<my-footer now="1"/>

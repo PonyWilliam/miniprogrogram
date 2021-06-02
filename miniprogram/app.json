@@ -10,12 +10,14 @@
     "pages/index/borrow/borrow",
     "pages/index/confirm/confirm"
   ],
+  "darkmode": true,
+  "themeLocation": "theme.json",
   "window": {
-    "backgroundColor": "#F6F6F6",
+    "backgroundColor": "#fff",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#efefef",
+    "navigationBarBackgroundColor": "@navBgColor",
     "navigationBarTitleText": "首页",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "@navTxtStyle"
   },
   "useExtendedLib": {
     "weui": true

@@ -7,7 +7,16 @@
     height:88rpx;
     width:100%;
 }
+@keyframes header{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
 .header{
+    animation: header 1s linear;
     text-align: center;
     width:100%;
 }
@@ -26,13 +35,23 @@
     width:240rpx;
     height:240rpx;
 }
+@keyframes rotation{
+    from {
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
 .header .info .images .ava{
     width:240rpx;
     height:240rpx;
     z-index: -2;
     display: block;
     background-size:cover;
-    border-radius: 45rpx;
+    border-radius: 50%;
+    box-shadow: 12rpx 8rpx 5rpx rgba(222, 222, 222,.35);
+    animation: rotation 10s linear infinite;
 }
 
 .header .info .images .small{
@@ -92,6 +111,90 @@
     width:100%;
     box-sizing: border-box;
     margin-bottom: calc(30rpx + 106rpx + 15rpx);
+}
+@keyframes card1{
+    from{
+        opacity: 0;
+        transform:scale(0);
+    }
+    80%{
+        opacity: 0;
+        transform:scale(0);
+    }
+    95%{
+        opacity: 0.8;
+        transform:scale(1.2);
+    }
+    100%{
+        opacity: 1;
+        transform:scale(1);
+    }
+}
+@keyframes card2{
+    from{
+        opacity: 0;
+        transform:scale(0);
+    }
+    83.33%{
+        opacity: 0;
+        transform:scale(0);
+    }
+    95%{
+        opacity: 0.8;
+        transform:scale(1.2);
+    }
+    100%{
+        opacity: 1;
+        transform:scale(1);
+    }
+}
+@keyframes card3{
+    from{
+        opacity: 0;
+        transform:scale(0);
+    }
+    85.71%{
+        opacity: 0;
+        transform:scale(0);
+    }
+    95%{
+        opacity: 0.8;
+        transform:scale(1.2);
+    }
+    100%{
+        opacity: 1;
+        transform:scale(1);
+    }
+}
+@keyframes card4{
+    from{
+        opacity: 0;
+        transform:scale(0);
+    }
+    87.5%{
+        opacity: 0;
+        transform:scale(0);
+    }
+    95%{
+        opacity: 0.8;
+        transform:scale(1.2);
+    }
+    100%{
+        opacity: 1;
+        transform:scale(1);
+    }
+}
+.container .card:nth-child(1){
+    animation: card1 1.25s linear;
+}
+.container .card:nth-child(2){
+    animation: card1 1.5s linear;
+}
+.container .card:nth-child(3){
+    animation: card1 1.75s linear;
+}
+.container .card:nth-child(4){
+    animation: card1 2s linear;
 }
 .content .card{
     width:312rpx;

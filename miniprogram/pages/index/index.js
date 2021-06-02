@@ -1,9 +1,14 @@
 //index.js
 const app = getApp()
+var videoContext;
 Page({
   data:{
+      animate:'',
       worker:null,
       full:false,
+      show1:false,
+      show2:false,
+      loading:true,
       fullscreen:{
         width:"0px",
         height:"0px",
@@ -27,12 +32,12 @@ Page({
             content:'为了方便大家之间转借，在此申请即可'
           },
           {
-            title:'他人转借',
-            content:'其他人如果申请了转借给我，可以在这里查看'
+            title:'转借确认',
+            content:'其他人如果申请了转借给我，可以在这里查看并确认'
           },
           {
-            title:'如何使用',
-            content:'学习本程序如何使用的视频演示'
+            title:'产品介绍',
+            content:'对本小程序功能的介绍视频'
           },
           {
             title:'关于我们',
@@ -61,10 +66,22 @@ Page({
       })
   },
   go5:function(){
-
+      this.setData({
+        show1:false,
+        show2:true
+      })
+      this.openfull()
+      
   },
   go6:function(){
+    this.setData({
+      show1:true,
+      show2:false
+    })
     this.openfull()
+  },
+  video:function(){
+
   },
   openfull:function(){
     this.setData({
@@ -92,6 +109,7 @@ Page({
     },700)
   },
   closefull:function(){
+    this.videoContext.stop()
     this.setData({
         fullscreen:{
           width:"100%",
@@ -116,7 +134,9 @@ Page({
     },1000)
   },
   onLoad:function(){
-    wx.showLoading()
+    this.setData({
+      loading:true
+    })
     let exptime = wx.getStorageSync('exp')
     if(exptime == undefined){
       wx.redirectTo({
@@ -146,6 +166,10 @@ Page({
     wx.clearStorageSync('worker')
 },
   onReady:function(){
-      wx.hideLoading()
+      this.setData({
+          animate:'opacity:1;transform:translate(0)',
+          loading:false
+      })
+      this.videoContext = wx.createVideoContext('myvideo')
   }
 })

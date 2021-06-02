@@ -1,5 +1,5 @@
 {
-  "name": "login",
+  "name": "getToken",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mysql": "^2.18.1",
+    "request": "^2.88.2",
     "wx-server-sdk": "~2.4.0"
   }
 }

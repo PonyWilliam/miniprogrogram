@@ -29,7 +29,7 @@
                 通知发布
             </view>
             <view class="content">
-                尊敬的管理{{worker.Name}}，您好。您可以在下方输入标题、内容、来发表新的通知推送给用户
+                尊敬的管理员:{{worker.Name}}，您好。您可以在下方输入标题、内容、来发表新的通知推送给用户
             </view>
             <view class="form">
                 标题:<input model:value="{{title}}" class="form_input form_title" type="text" />
@@ -37,8 +37,8 @@
                 署名:<input model:value="{{name}}" class="form_input form_name" type="text" />
             </view>
             <view class="submit">
-                <button class="success button" bindtap="submit">提 交</button>
                 <button class="warning button" bindtap="cancel">取 消</button>
+                <button class="success button" bindtap="submit">提 交</button>
             </view>
         </view>
     </view>

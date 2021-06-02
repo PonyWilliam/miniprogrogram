@@ -15,13 +15,15 @@
     .header .subtitle {
         color: rgb(240, 240, 240);
     }
-
+    .content .card{
+        background:rgba(66, 66, 66, .65);
+    }
     .content .card .title {
-        color: rgb(220, 223, 236);
+        color: rgba(255, 255, 255,.75);
     }
 
     .content .card .text {
-        color: rgb(220, 223, 236);
+        color: rgba(255, 255, 255,.65);
     }
 
     .full .title {

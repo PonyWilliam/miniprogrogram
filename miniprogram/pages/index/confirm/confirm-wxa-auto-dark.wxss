@@ -24,7 +24,9 @@
     .header .tips .content {
         color: rgb(231, 231, 231);
     }
-
+    .content{
+        color:rgba(255, 255, 255, .65);
+    }
     .content .time {
         color: rgb(91, 91, 112);
     }

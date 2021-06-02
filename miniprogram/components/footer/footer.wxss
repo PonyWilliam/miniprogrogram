@@ -1,5 +1,16 @@
 /* components/footer/footer.wxss */
+@keyframes footer{
+    from{
+        transform:scale(0.2) translate(0,calc(100% + 80rpx));
+        opacity: 0;
+    }
+    to{
+        transform:scale(1);
+        opacity: 1;
+    }
+}
 .footer{
+    animation: footer 1.5s linear;
     position: fixed;
     bottom:30rpx;
     flex-direction: row;

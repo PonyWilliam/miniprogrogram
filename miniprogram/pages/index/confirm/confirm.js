@@ -107,14 +107,11 @@ Page({
                     success:res2=>{
                         console.log(res2)
                         wx.hideLoading()
-                        if(res2.data == undefined){
-                            this.setData({
-                                error:'未知错误'
-                            })
-                        }else if(res2.data.msg == "success update"){
+                        if(res2.data.msg == "success update"){
                             this.setData({
                                 success:"已成功同意",
                             })
+                            return
                         }else{
                             this.setData({
                                 error:res2.data.msg || "未知错误",

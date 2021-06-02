@@ -1,0 +1,44 @@
+<!--
+此文件为开发者工具生成，生成时间: 2021/6/1 上午11:32:53
+使用方法：
+在 /Users/williamtan/WeChatProjects/miniprogram-2/miniprogram/pages/index/index.wxml 引入模板
+
+```
+<import src="index.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 /Users/williamtan/WeChatProjects/miniprogram-2/miniprogram/pages/index/index.wxss 中引入样式
+```
+@import "./index.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="container" data-weui-theme="light" style="opacity:1;transform:translate(0)">
+      <view class="header">
+        <text class="maintitle sk-transparent sk-text-22-5000-250 sk-text">HI,admin账号</text>
+        <text class="subtitle sk-transparent sk-text-17-1053-988 sk-text">欢迎登陆设备管理系统</text>
+      </view>
+      <view class="content">
+        <view class="card">
+          <image class="logo sk-image"></image>
+          <text class="title sk-transparent sk-text-18-7500-868 sk-text">设备查询</text>
+          <text class="text sk-transparent sk-text-18-7500-332 sk-text">查询仓库内可出借的产品</text>
+        </view>
+        <view class="card">
+          <image class="logo sk-image"></image>
+          <text class="title sk-transparent sk-text-18-7500-612 sk-text">转借他人</text>
+          <text class="text sk-transparent sk-text-18-7500-137 sk-text">为了方便大家之间转借，在此申请即可</text>
+        </view>
+        <view class="card">
+          <image class="logo sk-image"></image>
+          <text class="title sk-transparent sk-text-18-7500-338 sk-text">产品介绍</text>
+          <text class="text"></text>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

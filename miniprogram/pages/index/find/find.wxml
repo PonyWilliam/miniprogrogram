@@ -28,7 +28,7 @@
         </view>
     </view>
     <image class="devide" src="cloud://dasai-8gg0xegvdb3b7671.6461-dasai-8gg0xegvdb3b7671-1305930709/images/mine/path.svg" />
-    <view class="result">
+    <view class="result" style="opacity:{{opacity}}">
         <!--展现result-->
         <view class="title" wx:if="{{showtable}}">
           查询结果

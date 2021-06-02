@@ -8,25 +8,26 @@
  */
 
 @media (prefers-color-scheme: dark) {
-    .header .tips {
+    .header .tips{
         background: rgb(29, 29, 29);
-        box-shadow: rgb(0, 0, 0);
+        box-shadow: 8rpx 6rpx 3rpx #444!important;
     }
-
     .header .tips .title {
-        color: rgb(255, 255, 255);
+        color: rgba(255, 255, 255,.75);
     }
-
     .header .tips .content {
-        color: rgb(231, 231, 231);
+        color: rgba(231, 231, 231,.7);
     }
-
+    .header .card .content .picker{
+        color:rgba(231, 231, 231, .68);
+    }
     .header .card .submit .button {
+        color:rgba(255, 255, 255, .55);
         background: rgb(34, 34, 34);
     }
 
     .result .title {
-        color: rgb(255, 255, 255);
+        color: rgba(255, 255, 255,.65);
     }
 
     .bg-w {
@@ -34,11 +35,11 @@
     }
 
     .bg-g {
-        background: rgb(0, 54, 71);
+        background: rgb(0, 65, 150);
     }
 
     .th {
-        background: rgb(85, 124, 255);
+        background: rgba(66, 88, 222,.75);
         color: rgb(33, 30, 30);
     }
 }

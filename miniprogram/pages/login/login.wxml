@@ -1,17 +1,23 @@
+<image class="logo" src="cloud://dasai-8gg0xegvdb3b7671.6461-dasai-8gg0xegvdb3b7671-1305930709/images/all/logo.png"></image>
 <view class="container">
     <view class="mask">
     </view>
-    <image class="logo" src="cloud://dasai-8gg0xegvdb3b7671.6461-dasai-8gg0xegvdb3b7671-1305930709/images/all/logo.png"></image>
-    <view class="content">
+       <view class="content">
         <view class="header">
             <view class="title">校园设备管理</view>
             <view class="subtitle">从这里开始</view>
         </view>
         <view class="login">
-            <input model:value="{{username}}" bindinput="empty" type="text" class="user username" placeholder="学号" />
+            <input model:value="{{username}}" bindinput="empty" type="text" class="user username" placeholder="账号" />
             <input model:value="{{password}}" bindinput="empty" type="password" class="user pwd" placeholder="密码"/>
-            <button class="submit" bindtap="login">
+            <button class="submit" bindtap="login" wx:if="{{!bind}}">
                 登  录
+            </button>
+            <button class="submit" bindtap="wxlogin" wx:if="{{!bind}}">
+                微信一键登录
+            </button>
+            <button class="submit" bindtap="gobind" wx:if="{{bind}}">
+                绑  定
             </button>
             <view class="tips">
                 本小程序暂仅供本校学生使用
@@ -19,9 +25,11 @@
         </view>
     </view>
     <mp-dialog title="信息不全" show="{{show1}}" bindbuttontap="close1" buttons="{{oneButton}}">
-        <view>请填写学号和密码</view>
+        <view>请填写账号和密码</view>
     </mp-dialog>
     <mp-dialog title="信息错误" show="{{show2}}" bindbuttontap="close2" buttons="{{oneButton}}">
-        <view>学号或密码不正确</view>
+        <view>账号或密码不正确</view>
     </mp-dialog>
+    <mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+    <mp-toptips msg="{{success}}" type="success" show="{{success}}"></mp-toptips>
 </view>

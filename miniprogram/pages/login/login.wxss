@@ -4,12 +4,35 @@
     color:#000;
     margin-bottom:60rpx;
 }
+@keyframes logo{
+    from{
+        transform:scale(0) rotate(180deg);
+        opacity: 0;
+    }
+    75%{
+        transform: scale(1.25) rotate(360deg);
+        opacity: 0.75;
+    }
+    to{
+        transform: scale(1) rotate(360deg);
+        opacity: 1;
+    }
+}
 .logo{
-    height:120rpx;
-    width:120rpx;
-    left:80rpx;
-    top:calc(300rpx - 120rpx);
+    animation: logo 1.5s linear;
+    height:480rpx;
+    width:480rpx;
+    left:-50rpx;
+    top:-50rpx;
     position: absolute;
+}
+@keyframes mask{
+    from{
+        transform:translate(50%) rotate(0);
+    }
+    to{
+        transform:translate(0) rotate(230deg);
+    }
 }
 .mask{
     position: absolute;
@@ -19,7 +42,9 @@
     left:480rpx;
     top:-350rpx;
     background: linear-gradient(to left,rgba(0, 93, 255, 0.6) 0%, rgba(28, 106, 237, 0.36) 100%);
-    transform: rotate(230deg);
+    transform:translate(50%) rotate(0);
+    animation: mask .8s linear 1s;
+    animation-fill-mode: forwards;
 }
 /*
     大约500rpx，其实可以用三角函数算一下。。。
@@ -36,6 +61,29 @@
     text-align: left;
     font-size:64rpx;
     line-height:80rpx;
+    animation: header .8s linear 1s;
+    animation-fill-mode: forwards;
+    transform: translate(-100%) scale(0.2);
+}
+@keyframes header{
+    from{
+        transform: translate(-100%) scale(0.2);
+    }
+    40%{
+        transform: translate(0,-40rpx) scale(0.6);
+    }
+    60%{
+        transform:translate(0,-20rpx) scale(0.7);
+    }
+    70%{
+        transform:translate(0,-30rpx) scale(0.9);
+    }
+    80%{
+        transform:translate(0,-40rpx) scale(0.95);
+    }
+    to{
+        transform:translate(0) scale(1);
+    }
 }
 .container .content .header .title{
     font-weight: 600;
@@ -44,7 +92,31 @@
     font-weight: 200;
     color:rgb(136, 136, 136);
 }
+@keyframes content{
+    from{
+        transform: scale(0);
+        opacity: 0;
+    }
+    60%{
+        transform: scale(1.2);
+        opacity: 0.9;
+    }
+    70%{
+        transform: scale(1.1);
+    }
+    80%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
 .container .content .login{
+    opacity: 0;
+    animation:content 1s linear 1.8s;
+    animation-fill-mode: forwards;
+    transform: scale(0);
     margin-top:60rpx;
     display: flex;
     justify-content: center;

@@ -8,17 +8,20 @@
  */
 
 @media (prefers-color-scheme: dark) {
+    page{
+        color:rgba(255, 255, 255, .6);
+    }
     .header .tips {
         background: rgb(29, 29, 29);
-        box-shadow: rgb(0, 0, 0);
+        box-shadow: 4rpx 2rpx 4rpx rgba(255, 255, 255, .1)!important;
     }
 
     .header .tips .title {
-        color: rgb(255, 255, 255);
+        color: rgba(255, 255, 255,.75);
     }
 
     .header .tips .content {
-        color: rgb(231, 231, 231);
+        color: rgba(231, 231, 231,.7);
     }
 
     .header .card .select .name {
@@ -39,5 +42,20 @@
     .header .card .select .submit {
         background: rgb(0, 110, 0);
         color: rgb(17, 17, 17);
+    }
+    .weui-search-bar__label{
+        background: rgb(166, 166, 166);
+        color:rgba(255, 255, 255, .65)!important;
+    }
+    .weui-search-bar,.weui-cells{
+        background:rgba(10, 10, 10, .65)!important;
+        color:rgb(122, 122, 122)!important;
+    }
+    .weui-search-bar__input{
+        color:#dfdfdf!important;
+    }
+    .weui-search-bar__form{
+        color:#bababa;
+        background:#222;
     }
 }

@@ -1,7 +1,16 @@
+@keyframes container{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
 .container{
     width:100%;
     padding:30rpx;
     box-sizing: border-box;
+    animation: container .8s linear;
 }
 .header .tips{
     width:calc(100% - 40rpx);
@@ -63,6 +72,7 @@
     width:100%;
     box-sizing: border-box;
     padding:15rpx 20rpx;
+    transition: all 1s;
 }
 .result .title{
   color:#000;
