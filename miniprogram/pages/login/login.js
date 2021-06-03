@@ -105,7 +105,7 @@ Page({
             //密码正确，保存token和持续时间并跳转界面
             wx.setStorageSync('token', data.token)
             let timestamp = Date.parse(new Date()) / 1000;
-            wx.setStorageSync('exp', timestamp + 3600 * 12 - 600)//有效期12个小时,预留10分钟防止掉线
+            wx.setStorageSync('exp', timestamp + 3600 * 4 - 600)//有效期12个小时,预留10分钟防止掉线
             wx.setStorageSync('user', this.data.username)//保存用户名，用来查找用户
             wx.request({
               url: `${config.url}/work/workerusername/${this.data.username}`,
@@ -152,7 +152,26 @@ Page({
       wx.clearStorageSync('user')
       wx.clearStorageSync('worker')
   },
+  subscribe:function(){
+    return new Promise((reslove,reject)=>{
+      wx.requestSubscribeMessage({
+        tmplIds: ['hHJ6oZvcFrTHermtIeVxVep_H4Il3-B00ZOTPNxa96Q','ZcIml_ccakF6A6BQ9NkYbu3cG4rzdMLzGgfStFwksrc','RnPQ3V7KUb-v5eoB_Fx7Vh2HO7hPS4-YnHQjUJN42Kk'],
+        success:_=>{
+          reslove(1)
+        },fail:_=>{
+            this.setData({
+                error:'微信登录必须要订阅消息哦'
+            })
+            reslove(2)
+        }
+      })
+    })
+  },
   wxlogin:async function(){
+      const temp = await this.subscribe()
+      if(temp==2){
+        return
+      }
       wx.showLoading({
         title: '正在努力加载',
       })
@@ -166,13 +185,14 @@ Page({
           let token = await wx.cloud.callFunction({
             'name':'getToken',
             data:{
-              'username':res.result.username,
+              'user':res.result.username,
             }
           })
             token = token.result
+            console.log(token)
             wx.setStorageSync('token', token)
             let timestamp = Date.parse(new Date()) / 1000;
-            wx.setStorageSync('exp', timestamp + 3600 * 12 - 600)//有效期12个小时,预留10分钟防止掉线
+            wx.setStorageSync('exp', timestamp + 3600 * 4 - 600)//有效期4个小时,预留10分钟防止掉线
             wx.setStorageSync('user', res.result.username)//保存用户名，用来查找用户
             let worker = {};
             worker.ID = res.result.id

@@ -98,7 +98,8 @@ Page({
           this.setData({
               showtable:true,
               showarea:true,
-              result:res.data.data
+              result:res.data.data,
+              opacity:1
           })
           console.log(res.data.data)
       }

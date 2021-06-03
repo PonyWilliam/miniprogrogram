@@ -158,7 +158,7 @@ Page({
               wx.hideLoading()
               this.setData({
                   qrimg:res.data,
-                  second:120,
+                  second:30,
                   mineopacity:1,
               })
               if(e){

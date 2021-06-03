@@ -104,7 +104,7 @@ Page({
     }
     },1000)
   },
-  submit:function(){
+  submit:async function(){
       if(this.data.worker.ID != 1){
           //没全县
           this.setData({
@@ -119,6 +119,13 @@ Page({
           return
       }
       let time = date.formatDate(new Date(),"YYYY-MM-DD HH:ii:ss")
+      const res = await wx.cloud.callFunction({
+          "name":"pushmessage",
+          data:{
+              title:this.data.title
+          }
+      })
+      console.log(res)
       db.collection('message').add({
           data: {
               title:this.data.title,

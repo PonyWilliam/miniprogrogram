@@ -151,8 +151,7 @@ color:rgba(11, 11, 18, .65);
 .full .form{
     width:100%;
     box-sizing: border-box;
-    padding:20rpx 60rpx;
-
+    padding:20rpx 10rpx;
 }
 .full .form .form_input{
   text-align: left;
