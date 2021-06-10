@@ -32,7 +32,7 @@
             项 目 介 绍
             </view>
             <view class="video_content">
-                <video controls="true" catchtap="video" class="myvideo" id="myvideo" src="cloud://dasai-8gg0xegvdb3b7671.6461-dasai-8gg0xegvdb3b7671-1305930709/video/1.mp4"></video>
+                <video wx:if="{{showvideo}}" controls="true" catchtap="video" class="myvideo" id="myvideo" src="{{videourl}}"></video>
             </view>
         </view>
     </view>

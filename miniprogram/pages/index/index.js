@@ -9,6 +9,7 @@ Page({
       show1:false,
       show2:false,
       loading:true,
+      showvideo:false,
       fullscreen:{
         width:"0px",
         height:"0px",
@@ -16,7 +17,8 @@ Page({
         img:null,
         rgba:"rgba(255,255,255,.01)",
         padding:"0 0",
-        opacity:"opacity:0.01"
+        opacity:"opacity:0.01",
+        videourl:'',
       },//实现动画效果
       cards:[
           {
@@ -81,7 +83,7 @@ Page({
     this.openfull()
   },
   video:function(){
-
+    //防止出现冒泡而已
   },
   openfull:function(){
     this.setData({
@@ -165,11 +167,28 @@ Page({
     wx.clearStorageSync('user')
     wx.clearStorageSync('worker')
 },
-  onReady:function(){
-      this.setData({
-          animate:'opacity:1;transform:translate(0)',
-          loading:false
+  onReady:async function(){
+      wx.showLoading({
+        title: 'loading···',
+      })
+      const tempres = await wx.cloud.callFunction({
+        name:'showvideo',
       })
       this.videoContext = wx.createVideoContext('myvideo')
+      this.setData({
+          animate:'opacity:1;transform:translate(0)',
+          loading:false,
+          videourl:'cloud://dasai-8gg0xegvdb3b7671.6461-dasai-8gg0xegvdb3b7671-1305930709/video/1.mp4'
+      })
+      wx.hideLoading()
+      if(tempres.result==0){
+        this.setData({
+          showvideo:false
+        })
+        return
+      }
+      this.setData({
+        showvideo:true
+      })
   }
 })

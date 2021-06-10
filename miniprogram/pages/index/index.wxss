@@ -240,6 +240,7 @@
     width:100%;
     display: block;
     box-sizing: border-box;
+    border-radius: 20rpx;
 }
 @import 'index-wxa-auto-dark.wxss';
 @import "index.skeleton.wxss";

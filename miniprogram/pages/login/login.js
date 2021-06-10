@@ -11,6 +11,7 @@ Page({
       oneButton: [{text: '确定'}],
       show1:false,
       show2:false,
+      show3:false,
       errmsg:'',
       error:'',
       bind:false,
@@ -268,8 +269,19 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-
+  close3:function(){
+    this.setData({
+        show3:false,
+    })
+  },
+  onReady: async function () {
+      const content = await wx.cloud.callFunction({
+        name:'gonggao'
+      })
+      this.setData({
+          content:content.result,
+          show3:true,
+      })
   },
 
   /**

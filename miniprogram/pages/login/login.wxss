@@ -155,4 +155,19 @@
     color:rgba(136, 136, 136, 1);
     margin-top:60rpx;
 }
+.intro_title{
+    font-weight: 400;
+    font-size:48rpx;
+    line-height:80rpx;
+    color:#222;
+}
+.intro_content{
+    margin-top:40rpx;
+    font-size:34rpx;
+    text-indent: 68rpx;
+    line-height:50rpx;
+    font-weight: 300;
+    text-align: left;
+    color:#555;
+}
 @import 'login-wxa-auto-dark.wxss'

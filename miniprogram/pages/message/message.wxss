@@ -40,7 +40,7 @@ page{
     margin-top:26rpx;
     background-color:#5A5ADD;
     width: 652rpx;
-    height: 320rpx;
+    min-height: 320rpx;
     border-radius: 30rpx;
     padding:40rpx;
     box-sizing: border-box;
